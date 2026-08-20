@@ -13,13 +13,13 @@ const rawConfig: SiteConfig = {
     tagline: "Frische Webseiten für dein Unternehmen.",
     description:
       "Leana gestaltet moderne, übersichtliche Webseiten für kleine Unternehmen und Selbstständige in der Region — persönlich, unkompliziert und mit vollem Einsatz für dein Projekt.",
-    url: "https://www.leana-webdesign.example",
+    url: "https://www.leana-me.ch",
     locale: "de-CH",
     jsonLdType: "Person",
   },
 
   contact: {
-    email: "hallo@leana-webdesign.example",
+    email: "hallo@leana-me.ch",
     address: {
       city: "Jonen",
       region: "AG",
@@ -61,16 +61,16 @@ const rawConfig: SiteConfig = {
   ],
 
   hero: {
-    eyebrow: "Webdesign für kleine Unternehmen",
+    eyebrow: "Webdesign von einer engagierten Schülerin",
     headline: "Deine Website, frisch gedacht.",
     subheadline:
-      "Ich gestalte moderne, übersichtliche Webseiten für kleine Unternehmen und Selbstständige — persönlich, unkompliziert und mit vollem Einsatz für dein Projekt.",
+      "Ich bin Schülerin und gestalte in meiner Freizeit moderne, übersichtliche Webseiten für kleine Unternehmen in der Region. Nach dem Launch zeige ich dir, wie du sie ganz einfach selbst weiterführen kannst.",
     ctaPrimary: { label: "Projekt anfragen", href: "/kontakt" },
     ctaSecondary: { label: "Beispielprojekte ansehen", href: "/projekte" },
     media: {
       type: "image",
       src: "/images/hero-workspace.jpg",
-      alt: "Laptop mit einer modernen Webseiten-Vorschau auf einem hellen Schreibtisch",
+      alt: "Gemütlicher Schreibtisch mit Laptop, Lichterkette, einer kleinen Pflanze und einer Tasse Kakao",
       aspectRatio: "4 / 5",
     },
   },
@@ -100,10 +100,10 @@ const rawConfig: SiteConfig = {
           "Deine bestehende Webseite wirkt veraltet? Ich überarbeite Struktur, Gestaltung und Texte.",
       },
       {
-        icon: "wrench",
-        title: "Pflege & Anpassungen",
+        icon: "graduation-cap",
+        title: "Einführung & Übergabe",
         description:
-          "Kleine Änderungen, Texte aktualisieren oder neue Inhalte einpflegen — unkompliziert und zuverlässig.",
+          "Nach dem Launch zeige ich dir Schritt für Schritt, wie du Texte, Bilder und kleine Inhalte selbst anpassen kannst — damit du danach unabhängig bist.",
       },
     ],
     process: [
@@ -124,7 +124,7 @@ const rawConfig: SiteConfig = {
       {
         title: "Übergabe",
         description:
-          "Du erhältst deine fertige Webseite inklusive einer kurzen Einführung für kleine Anpassungen.",
+          "Du erhältst deine fertige Webseite inklusive einer persönlichen Einführung, damit du sie danach eigenständig pflegen kannst.",
       },
     ],
     note: "Alle Angebote sind individuell — schreib mir einfach, und ich melde mich mit einem passenden Vorschlag.",
@@ -132,15 +132,15 @@ const rawConfig: SiteConfig = {
 
   about: {
     eyebrow: "Über mich",
-    title: "Webdesign mit frischem Blick",
+    title: "Eine Schülerin mit Freude am Gestalten",
     body: [
-      "Ich beschäftige mich schon länger mit Webdesign — zuerst aus Neugier, inzwischen mit dem Ziel, kleinen Unternehmen in der Region zu einem modernen Online-Auftritt zu verhelfen.",
-      "Ich stehe noch am Anfang meines Wegs in die Gestaltung — und genau das bringt viel Energie, Neugier und volle Aufmerksamkeit für dein Projekt mit sich. Jede Website ist für mich eine Chance, mich weiterzuentwickeln und dir dabei etwas Gutes zu liefern.",
+      "Ich heisse Leana, bin Schülerin und gestalte in meiner Freizeit Websites für kleine Unternehmen in der Region — mit diesem kleinen Nebenprojekt spare ich mir etwas für mein späteres Studium dazu.",
+      "Weil ich noch am Anfang meines Wegs in die Gestaltung stehe, bekommst du bei mir keine anonyme Agentur, sondern volle Aufmerksamkeit, ehrliche Beratung und eine Website, die du danach ganz einfach selbst weiterführen kannst.",
     ],
     media: {
       type: "image",
-      src: "/images/about-workspace.jpg",
-      alt: "Flach von oben fotografierter Schreibtisch mit Skizzenbuch, Laptop und Notizen",
+      src: "/images/leana-portrait.jpg",
+      alt: "Porträt von Leana",
       aspectRatio: "4 / 5",
     },
     values: [
@@ -282,7 +282,7 @@ const rawConfig: SiteConfig = {
         },
         {
           heading: "Kontakt",
-          paragraphs: ["E-Mail: hallo@leana-webdesign.example"],
+          paragraphs: ["E-Mail: hallo@leana-me.ch"],
         },
         {
           heading: "Art des Angebots",
@@ -305,7 +305,7 @@ const rawConfig: SiteConfig = {
         {
           heading: "Verantwortliche Person",
           paragraphs: [
-            "Verantwortlich für die Datenverarbeitung auf dieser Website ist Leana, Jonen AG, hallo@leana-webdesign.example.",
+            "Verantwortlich für die Datenverarbeitung auf dieser Website ist Leana, Jonen AG, hallo@leana-me.ch.",
           ],
         },
         {

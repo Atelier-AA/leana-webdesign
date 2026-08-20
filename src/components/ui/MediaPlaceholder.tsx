@@ -14,11 +14,14 @@ export function MediaPlaceholder({
   className,
   priority = false,
   sizes,
+  focalPoint = "center",
 }: {
   media: Media;
   className?: string;
   priority?: boolean;
   sizes?: string;
+  /** Which part of the image to keep when the container crops it. */
+  focalPoint?: "center" | "top";
 }) {
   const hasImage = media.type !== "placeholder" && Boolean(media.src);
 
@@ -34,7 +37,7 @@ export function MediaPlaceholder({
           fill
           priority={priority}
           sizes={sizes ?? "100vw"}
-          className="object-cover"
+          className={cn("object-cover", focalPoint === "top" && "object-top")}
         />
       ) : (
         <div

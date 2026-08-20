@@ -26,7 +26,7 @@ export default function LeistungenPage() {
         banner={{
           type: "image",
           src: "/images/services-banner.jpg",
-          alt: "Abstrakte Illustration von überlappenden Browserfenstern",
+          alt: "Gemütlicher Arbeitsplatz von oben mit Laptop, Wireframe-Skizze, Lichterkette und einer Tasse Kakao",
           aspectRatio: "16 / 6",
         }}
       />

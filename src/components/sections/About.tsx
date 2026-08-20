@@ -15,7 +15,11 @@ export function About({
   return (
     <section className="py-20 md:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <MediaPlaceholder media={about.media} sizes="(min-width: 1024px) 40vw, 100vw" />
+        <MediaPlaceholder
+          media={about.media}
+          sizes="(min-width: 1024px) 40vw, 100vw"
+          focalPoint="top"
+        />
 
         <div>
           {showHeading ? (
