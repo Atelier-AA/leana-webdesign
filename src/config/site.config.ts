@@ -114,6 +114,8 @@ const rawConfig: SiteConfig = {
     eyebrow: "Warum ich das mache",
     title: "Warum ich das mache",
     subtitle: "Ich bin keine KI-Expertin. Ich möchte verstehen, was damit möglich ist.",
+    excerpt:
+      "Ich bin Schülerin und probiere aus, was mit künstlicher Intelligenz heute wirklich möglich ist — und teile ehrlich, was ich dabei lerne, ohne so zu tun, als wäre ich Expertin.",
     body: [
       "Ich heisse Leana, bin Schülerin und versuche gerade herauszufinden, was mit künstlicher Intelligenz wirklich möglich ist.",
       "Nicht theoretisch, sondern indem ich Dinge damit mache.",

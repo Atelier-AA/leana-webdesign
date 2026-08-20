@@ -56,6 +56,7 @@ const aboutSchema = z.object({
   eyebrow: z.string().optional(),
   title: z.string().min(1),
   subtitle: z.string().optional(),
+  excerpt: z.string().optional(),
   body: z.array(z.string().min(1)).min(1),
   media: mediaSchema,
   values: z.array(valueItemSchema).default([]),

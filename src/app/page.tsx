@@ -16,7 +16,10 @@ export default function HomePage() {
         <Areas footerLink={{ label: "Alles, was ich ausprobiere", href: "/experimente" }} />
       ) : null}
       {features.about ? (
-        <About cta={{ label: "Warum ich das mache", href: "/warum-ich-das-mache" }} />
+        <About
+          mode="teaser"
+          cta={{ label: "Warum ich das mache", href: "/warum-ich-das-mache" }}
+        />
       ) : null}
       {features.experiments ? (
         <Experiments

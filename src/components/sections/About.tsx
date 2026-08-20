@@ -6,20 +6,25 @@ import { renderRichText } from "@/lib/richtext";
 
 export function About({
   showHeading = true,
+  mode = "full",
   cta,
 }: {
   showHeading?: boolean;
+  mode?: "teaser" | "full";
   cta?: { label: string; href: string };
 }) {
   const { about } = siteConfig;
+  const isTeaser = mode === "teaser";
+  const paragraphs = isTeaser && about.excerpt ? [about.excerpt] : about.body;
 
   return (
     <section className="py-20 md:py-28">
-      <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <Container className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <MediaPlaceholder
           media={about.media}
           sizes="(min-width: 1024px) 40vw, 100vw"
           focalPoint="top"
+          className={isTeaser ? undefined : "lg:sticky lg:top-28"}
         />
 
         <div>
@@ -36,7 +41,7 @@ export function About({
             </>
           ) : null}
           <div className="mt-6 space-y-4 text-pretty text-muted-foreground">
-            {about.body.map((paragraph) => (
+            {paragraphs.map((paragraph) => (
               <p key={paragraph}>{renderRichText(paragraph)}</p>
             ))}
           </div>
