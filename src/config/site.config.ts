@@ -10,9 +10,9 @@ const rawConfig: SiteConfig = {
   business: {
     name: "Leana",
     legalName: "Leana",
-    tagline: "Frische Webseiten für dein Unternehmen.",
+    tagline: "Ich probiere aus, was mit KI heute wirklich möglich ist.",
     description:
-      "Leana gestaltet moderne, übersichtliche Webseiten für kleine Unternehmen und Selbstständige in der Region — persönlich, unkompliziert und mit vollem Einsatz für dein Projekt.",
+      "Leana ist Schülerin und experimentiert mit künstlicher Intelligenz — sie testet Werkzeuge, baut kleine Projekte und teilt, was dabei wirklich funktioniert.",
     url: "https://www.leana-me.ch",
     locale: "de-CH",
     jsonLdType: "Person",
@@ -46,27 +46,28 @@ const rawConfig: SiteConfig = {
   },
 
   features: {
-    services: true,
+    areas: true,
     about: true,
-    projects: true,
+    experiments: true,
+    learning: true,
     reasons: true,
     contact: true,
   },
 
   navigation: [
-    { label: "Leistungen", href: "/leistungen" },
-    { label: "Über mich", href: "/ueber-mich" },
-    { label: "Projekte", href: "/projekte" },
+    { label: "Experimente", href: "/experimente" },
+    { label: "Was ich lerne", href: "/was-ich-lerne" },
+    { label: "Warum ich das mache", href: "/warum-ich-das-mache" },
     { label: "Kontakt", href: "/kontakt" },
   ],
 
   hero: {
-    eyebrow: "Webdesign von einer engagierten Schülerin",
-    headline: "Deine Website, frisch gedacht.",
+    headline: "Ich probiere aus, was mit KI heute wirklich möglich ist.",
     subheadline:
-      "Ich bin Schülerin und gestalte in meiner Freizeit moderne, übersichtliche Webseiten für kleine Unternehmen in der Region. Nach dem Launch zeige ich dir, wie du sie ganz einfach selbst weiterführen kannst.",
-    ctaPrimary: { label: "Projekt anfragen", href: "/kontakt" },
-    ctaSecondary: { label: "Beispielprojekte ansehen", href: "/projekte" },
+      "Ich heisse Leana, bin Schülerin und beschäftige mich mit künstlicher Intelligenz, neuen digitalen Werkzeugen und der Frage, was man damit tatsächlich selbst machen kann. Ich teste, lerne, baue kleine Projekte und teile hier, was dabei herauskommt.",
+    tagline: "KI ausprobieren. Verstehen. Und zeigen, was damit wirklich möglich ist.",
+    ctaPrimary: { label: "Schreib mir", href: "/kontakt" },
+    ctaSecondary: { label: "Meine Experimente ansehen", href: "/experimente" },
     media: {
       type: "image",
       src: "/images/hero-workspace.jpg",
@@ -75,67 +76,56 @@ const rawConfig: SiteConfig = {
     },
   },
 
-  services: {
-    eyebrow: "Leistungen",
-    title: "Was ich für dich umsetzen kann",
+  areas: {
+    eyebrow: "Was ich ausprobiere",
+    title: "Was ich mit KI ausprobiere",
     subtitle:
-      "Jedes Projekt ist anders — deshalb bespreche ich Umfang und Angebot immer persönlich mit dir, statt pauschale Preise online zu nennen.",
+      "KI ist viel mehr als nur ChatGPT. Deshalb probiere ich unterschiedliche Dinge aus und schaue, was davon im echten Leben wirklich brauchbar ist.",
     items: [
       {
         icon: "layout",
-        title: "Neue Website",
+        title: "Websites bauen",
         description:
-          "Eine komplette, moderne Webseite für dein Unternehmen — von der ersten Idee bis zur fertigen Seite.",
+          "Kann man mit KI eine moderne Website erstellen, auch wenn man keine Webagentur ist? Genau damit habe ich angefangen — ich probiere aus, wie weit KI beim Design, bei Texten, Bildern und der technischen Umsetzung helfen kann, und wo man trotzdem selbst Entscheidungen treffen muss.",
       },
       {
-        icon: "rocket",
-        title: "Landingpage",
+        icon: "image",
+        title: "Bilder & Gestaltung",
         description:
-          "Eine fokussierte Seite für ein einzelnes Angebot, ein Event oder eine Aktion, die schnell online gehen soll.",
+          "Ich teste, wie man mit KI Bilder erstellen, Ideen visualisieren oder bestehende Designs weiterentwickeln kann. Besonders spannend finde ich, wie viel Einfluss ein guter Auftrag an die KI auf das Ergebnis hat.",
       },
       {
-        icon: "refresh-cw",
-        title: "Redesign",
+        icon: "pen-line",
+        title: "Texte & Ideen",
         description:
-          "Deine bestehende Webseite wirkt veraltet? Ich überarbeite Struktur, Gestaltung und Texte.",
+          "Wie gut kann KI beim Schreiben, Strukturieren oder Entwickeln von Ideen helfen? Ich probiere verschiedene Methoden aus und schaue, wann KI wirklich hilfreich ist — und wann ein Text plötzlich einfach nach KI klingt.",
       },
       {
-        icon: "graduation-cap",
-        title: "Einführung & Übergabe",
+        icon: "bot",
+        title: "Kleine digitale Helfer",
         description:
-          "Nach dem Launch zeige ich dir Schritt für Schritt, wie du Texte, Bilder und kleine Inhalte selbst anpassen kannst — damit du danach unabhängig bist.",
+          "Manchmal entsteht aus einer Idee ein kleines Tool, eine Automatisierung oder eine andere digitale Lösung. Mich interessiert dabei weniger, wie kompliziert die Technik dahinter ist, sondern ob sie am Ende tatsächlich etwas einfacher macht.",
       },
     ],
-    process: [
-      {
-        title: "Kurzes Kennenlernen",
-        description:
-          "Wir klären per E-Mail, was du brauchst und was dir bei deiner Website wichtig ist.",
-      },
-      {
-        title: "Angebot & Konzept",
-        description:
-          "Du bekommst ein unverbindliches, persönliches Angebot und einen ersten Gestaltungsvorschlag.",
-      },
-      {
-        title: "Umsetzung",
-        description: "Ich setze die Webseite um und halte dich laufend auf dem Laufenden.",
-      },
-      {
-        title: "Übergabe",
-        description:
-          "Du erhältst deine fertige Webseite inklusive einer persönlichen Einführung, damit du sie danach eigenständig pflegen kannst.",
-      },
-    ],
-    note: "Alle Angebote sind individuell — schreib mir einfach, und ich melde mich mit einem passenden Vorschlag.",
+    note: "Und wahrscheinlich noch einiges mehr. Ich weiss selbst noch nicht genau, wohin mich dieses Projekt führt — und eigentlich ist genau das der spannende Teil.",
   },
 
   about: {
-    eyebrow: "Über mich",
-    title: "Eine Schülerin mit Freude am Gestalten",
+    eyebrow: "Warum ich das mache",
+    title: "Warum ich das mache",
+    subtitle: "Ich bin keine KI-Expertin. Ich möchte verstehen, was damit möglich ist.",
     body: [
-      "Ich heisse Leana, bin Schülerin und gestalte in meiner Freizeit Websites für kleine Unternehmen in der Region — mit diesem kleinen Nebenprojekt spare ich mir etwas für mein späteres Studium dazu.",
-      "Weil ich noch am Anfang meines Wegs in die Gestaltung stehe, bekommst du bei mir keine anonyme Agentur, sondern volle Aufmerksamkeit, ehrliche Beratung und eine Website, die du danach ganz einfach selbst weiterführen kannst.",
+      "Ich heisse Leana, bin Schülerin und versuche gerade herauszufinden, was mit künstlicher Intelligenz wirklich möglich ist.",
+      "Nicht theoretisch, sondern indem ich Dinge damit mache.",
+      "Ich probiere verschiedene KI-Werkzeuge aus, baue kleine Projekte, gestalte Websites, teste Ideen und schaue, was funktioniert – und was eben nicht.",
+      "Dabei geht es mir nicht darum, so zu tun, als wäre ich KI-Expertin. Im Gegenteil: Ich bin selbst noch mittendrin und lerne ständig Neues dazu.",
+      "Genau daraus ist dieses Projekt entstanden.",
+      "Ich möchte dokumentieren, was ich herausfinde, meine Erfahrungen teilen und anderen zeigen, wie KI heute tatsächlich genutzt werden kann – verständlich und ohne den ganzen Hype darum.",
+      "Mich interessieren dabei auch die Grenzen. Wo hilft KI wirklich? Wo macht sie Fehler? Was kann sie erstaunlich gut? Und wo braucht es weiterhin den Menschen?",
+      "Ich finde besonders spannend, wie viel eine einzelne Person heute mit den richtigen Werkzeugen selbst ausprobieren und umsetzen kann.",
+      "Manchmal entsteht daraus eine Website. Manchmal eine Idee, ein Bild, ein kleiner digitaler Helfer oder etwas ganz anderes.",
+      "Und wenn eines dieser Experimente jemand anderem weiterhilft, umso besser.",
+      "Für mich ist dieses Projekt deshalb vor allem eines:\n**lernen, ausprobieren und teilen, was dabei herauskommt.**",
     ],
     media: {
       type: "image",
@@ -159,22 +149,24 @@ const rawConfig: SiteConfig = {
     ],
   },
 
-  projects: {
-    eyebrow: "Projekte",
-    title: "Beispielprojekte",
+  experiments: {
+    eyebrow: "Experimente",
+    title: "Was ich schon ausprobiert habe",
     subtitle:
-      "Diese Konzepte zeigen, wie ich arbeite und welchen Stil ich für unterschiedliche Branchen entwickle.",
-    note: "Diese Projekte sind Konzeptarbeiten zur Veranschaulichung meines Stils, keine realen Kundenaufträge.",
+      "Am meisten lerne ich, wenn ich etwas wirklich mache. Deshalb entstehen hier immer wieder kleine Experimente — manche beginnen mit einer einfachen Frage, andere mit einer Idee, die ich unbedingt ausprobieren möchte.",
+    intro: [
+      "Dabei geht es nicht darum, perfekte Musterprojekte zu präsentieren. Ich möchte zeigen, **was ich ausprobiert habe, wie ich vorgegangen bin und was ich dabei gelernt habe.**",
+    ],
     items: [
       {
         slug: "cafe-sonnenblick",
         title: "Café Sonnenblick",
-        category: "Gastronomie",
-        description:
-          "Konzept für ein kleines Quartier-Café mit Fokus auf Speisekarte und Öffnungszeiten.",
+        experimentQuestion:
+          "Kann ich mit KI eine komplette Website für ein kleines Café entwickeln?",
         content: [
-          "Für dieses Konzept stand eine warme, einladende Bildsprache im Vordergrund, kombiniert mit einer klar strukturierten Speisekarte und gut sichtbaren Öffnungszeiten.",
-          "Ziel war eine Seite, die auch mobil in Sekunden zeigt, was das Café ausmacht — und wie man es findet.",
+          "Von der ersten Idee über Texte und Gestaltung bis zur fertigen Seite.",
+          "**Was ich dabei ausprobiert habe:** Struktur, Texte, Gestaltung, Bilder und Webentwicklung mit Unterstützung verschiedener KI-Werkzeuge.",
+          "**Was ich gelernt habe:** KI kann unglaublich schnell Ideen liefern – aber ein gutes Ergebnis entsteht erst, wenn man auswählt, verändert und selbst Entscheidungen trifft.",
         ],
         media: {
           type: "image",
@@ -186,12 +178,10 @@ const rawConfig: SiteConfig = {
       {
         slug: "coiffeur-haarwerk",
         title: "Coiffeur Haarwerk",
-        category: "Beauty & Coiffeur",
-        description:
-          "Konzept für einen Coiffeursalon mit Leistungsübersicht und einfachem Kontaktweg für Terminanfragen.",
+        experimentQuestion:
+          "Wie schnell lässt sich aus einer einfachen Geschäftsidee eine klare digitale Präsenz entwickeln?",
         content: [
-          "Im Zentrum stand ein reduziertes, elegantes Erscheinungsbild, das die Leistungen klar gliedert, ohne überladen zu wirken.",
-          "Eine gut sichtbare Kontaktmöglichkeit sorgt dafür, dass Terminanfragen ohne Umwege ankommen.",
+          "Hier habe ich ausprobiert, wie sich Informationen über Leistungen, Stil und Kontakt so reduzieren lassen, dass eine einfache und verständliche Website entsteht.",
         ],
         media: {
           type: "image",
@@ -203,12 +193,10 @@ const rawConfig: SiteConfig = {
       {
         slug: "handwerk-meier",
         title: "Handwerk Meier",
-        category: "Handwerk",
-        description:
-          "Konzept für einen kleinen Handwerksbetrieb mit Leistungsübersicht und Kontaktformular.",
+        experimentQuestion: "Kann KI auch bei einer ganz einfachen Handwerker-Website sinnvoll helfen?",
         content: [
-          "Die Gestaltung setzt auf erdige Töne und klare Strukturen, damit Leistungen und Erreichbarkeit sofort auffindbar sind.",
-          "Ein einfaches Kontaktformular ersetzt lange Anfahrtsbeschreibungen und macht die erste Kontaktaufnahme leicht.",
+          "Bei diesem Projekt wollte ich bewusst nichts Ausgefallenes machen.",
+          "Die Frage war vielmehr: Kann KI helfen, Informationen schneller zu strukturieren und daraus eine einfache Website zu entwickeln, die ihren Zweck erfüllt?",
         ],
         media: {
           type: "image",
@@ -216,6 +204,43 @@ const rawConfig: SiteConfig = {
           alt: "Laptop mit einer Handwerksbetrieb-Webseiten-Vorschau auf einer Werkbank",
           aspectRatio: "4 / 5",
         },
+      },
+    ],
+  },
+
+  learning: {
+    eyebrow: "Was ich lerne",
+    title: "Was ich lerne",
+    subtitle:
+      "Hier dokumentiere ich, was ich beim Ausprobieren herausfinde — nicht als Experten-Blog, sondern immer aus meiner eigenen Perspektive: Ich habe das ausprobiert, das ist passiert, das habe ich daraus gelernt.",
+    items: [
+      {
+        title: "Was KI überraschend gut kann",
+        teaser: "Eine Sammlung von Momenten, in denen mich ein KI-Werkzeug wirklich überrascht hat.",
+      },
+      {
+        title: "Warum ein guter Prompt nicht alles löst",
+        teaser: "Was ich darüber gelernt habe, wie viel Formulierung wirklich ausmacht — und wo sie an Grenzen stösst.",
+      },
+      {
+        title: "Meine erste Website mit KI",
+        teaser: "Wie das erste Experiment gelaufen ist und was ich beim nächsten Mal anders machen würde.",
+      },
+      {
+        title: "Kann KI wirklich programmieren?",
+        teaser: "Ich probiere aus, wo KI beim Programmieren wirklich hilft — und wo nicht.",
+      },
+      {
+        title: "5 Dinge, die bei meinem ersten KI-Projekt schiefgingen",
+        teaser: "Eine ehrliche Liste, damit du nicht dieselben Fehler machen musst.",
+      },
+      {
+        title: "Wie erkenne ich, ob ein Bild mit KI erstellt wurde?",
+        teaser: "Ein paar Anhaltspunkte, die ich mir beim genauen Hinschauen angewöhnt habe.",
+      },
+      {
+        title: "Was ChatGPT weiss – und was nicht",
+        teaser: "Wo ich mich zu Beginn getäuscht habe, und wie ich das heute besser einschätze.",
       },
     ],
   },
@@ -247,9 +272,16 @@ const rawConfig: SiteConfig = {
 
   contactSection: {
     eyebrow: "Kontakt",
-    title: "Erzähl mir von deinem Projekt",
-    subtitle:
-      "Schreib mir kurz, worum es geht — ich melde mich mit einer ersten Einschätzung und einem unverbindlichen Vorschlag.",
+    title: "Hast du eine Idee, die ich ausprobieren sollte?",
+    subtitle: "Schreib mir, wenn du eine Idee hast, die ich ausprobieren sollte.",
+    body: [
+      "Vielleicht hast du selbst eine Frage zu KI.",
+      "Vielleicht gibt es in deinem Unternehmen etwas, bei dem du dich fragst, ob KI helfen könnte.",
+      "Oder vielleicht hast du einfach eine Idee, die spannend wäre auszuprobieren.",
+      "Dann schreib mir gerne.",
+      "**Ich kann nicht versprechen, dass ich für alles eine Lösung habe** – aber vielleicht können wir gemeinsam herausfinden, was möglich ist.",
+      "Und wenn daraus ein echtes kleines Projekt entsteht, umso besser.",
+    ],
     responseTime: "Antwort in der Regel innerhalb von 1–2 Tagen",
   },
 
@@ -264,10 +296,10 @@ const rawConfig: SiteConfig = {
   seo: {
     twitterHandle: undefined,
     keywords: [
-      "Webdesign Aargau",
-      "Website erstellen lassen",
-      "Webseite für kleine Unternehmen",
-      "Landingpage erstellen",
+      "KI ausprobieren",
+      "künstliche Intelligenz lernen",
+      "KI für kleine Unternehmen",
+      "KI-Experimente",
     ],
   },
 

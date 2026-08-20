@@ -7,85 +7,78 @@ import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { renderRichText } from "@/lib/richtext";
 
 export function generateStaticParams() {
-  return siteConfig.projects.items.map((item) => ({ slug: item.slug }));
+  return siteConfig.experiments.items.map((item) => ({ slug: item.slug }));
 }
 
-function findProject(slug: string) {
-  return siteConfig.projects.items.find((item) => item.slug === slug);
+function findExperiment(slug: string) {
+  return siteConfig.experiments.items.find((item) => item.slug === slug);
 }
 
 export async function generateMetadata(
-  props: PageProps<"/projekte/[slug]">
+  props: PageProps<"/experimente/[slug]">
 ): Promise<Metadata> {
   const { slug } = await props.params;
-  const project = findProject(slug);
-  if (!project) return {};
+  const experiment = findExperiment(slug);
+  if (!experiment) return {};
 
   return {
-    title: project.title,
-    description: project.description,
-    alternates: { canonical: `/projekte/${project.slug}` },
-    openGraph: { title: project.title, description: project.description },
+    title: experiment.title,
+    description: experiment.experimentQuestion,
+    alternates: { canonical: `/experimente/${experiment.slug}` },
+    openGraph: { title: experiment.title, description: experiment.experimentQuestion },
   };
 }
 
-export default async function ProjectDetailPage(props: PageProps<"/projekte/[slug]">) {
+export default async function ExperimentDetailPage(props: PageProps<"/experimente/[slug]">) {
   const { slug } = await props.params;
-  const project = findProject(slug);
+  const experiment = findExperiment(slug);
 
-  if (!project) {
+  if (!experiment) {
     notFound();
   }
 
-  const { contactSection, hero, projects } = siteConfig;
+  const { contactSection, hero } = siteConfig;
 
   return (
     <>
       <Breadcrumbs
-        items={[{ label: "Projekte", href: "/projekte" }, { label: project.title }]}
+        items={[{ label: "Experimente", href: "/experimente" }, { label: experiment.title }]}
       />
 
       <section className="pb-16 pt-14 md:pb-20 md:pt-16">
         <Container>
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.14em] text-accent">
-            {project.category}
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">
+            {experiment.title}
           </p>
-          <h1 className="max-w-3xl text-balance font-display text-4xl font-medium leading-[1.05]">
-            {project.title}
+          <h1 className="max-w-3xl text-balance font-display text-4xl font-medium leading-[1.1]">
+            {experiment.experimentQuestion}
           </h1>
         </Container>
 
         <Container className="mt-12">
           <MediaPlaceholder
-            media={{ ...project.media, aspectRatio: "16 / 9" }}
+            media={{ ...experiment.media, aspectRatio: "16 / 9" }}
             priority
             sizes="100vw"
           />
         </Container>
 
         <Container className="mt-12 max-w-3xl space-y-4 text-pretty text-lg text-muted-foreground">
-          {(project.content && project.content.length > 0
-            ? project.content
-            : project.description
-              ? [project.description]
-              : []
-          ).map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {experiment.content.map((paragraph) => (
+            <p key={paragraph}>{renderRichText(paragraph)}</p>
           ))}
-          {projects.note ? (
-            <p className="text-sm italic text-muted-foreground/80">{projects.note}</p>
-          ) : null}
         </Container>
 
         <Container className="mt-12 flex flex-wrap items-center gap-4">
           <Button href="/kontakt">{hero.ctaPrimary.label}</Button>
           <Link
-            href="/projekte"
+            href="/experimente"
             className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
           >
-            ← Alle Projekte
+            ← Alle Experimente
           </Link>
         </Container>
       </section>

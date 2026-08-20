@@ -1,19 +1,10 @@
-import {
-  Layout,
-  Rocket,
-  RefreshCw,
-  Wrench,
-  GraduationCap,
-  Sparkles,
-  type LucideIcon,
-} from "lucide-react";
+import { Layout, Image as ImageIcon, PenLine, Bot, Sparkles, type LucideIcon } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
   layout: Layout,
-  rocket: Rocket,
-  "refresh-cw": RefreshCw,
-  wrench: Wrench,
-  "graduation-cap": GraduationCap,
+  image: ImageIcon,
+  "pen-line": PenLine,
+  bot: Bot,
 };
 
 export function DynamicIcon({ name, className }: { name: string; className?: string }) {

@@ -27,28 +27,23 @@ const heroSchema = z.object({
   eyebrow: z.string().optional(),
   headline: z.string().min(1),
   subheadline: z.string().min(1),
+  tagline: z.string().optional(),
   ctaPrimary: linkSchema,
   ctaSecondary: linkSchema.optional(),
   media: mediaSchema,
 });
 
-const serviceItemSchema = z.object({
+const areaItemSchema = z.object({
   icon: z.string().min(1),
   title: z.string().min(1),
   description: z.string().min(1),
 });
 
-const processStepSchema = z.object({
-  title: z.string().min(1),
-  description: z.string().min(1),
-});
-
-const servicesSchema = z.object({
+const areasSchema = z.object({
   eyebrow: z.string().optional(),
   title: z.string().min(1),
   subtitle: z.string().optional(),
-  items: z.array(serviceItemSchema).min(1),
-  process: z.array(processStepSchema).default([]),
+  items: z.array(areaItemSchema).min(1),
   note: z.string().optional(),
 });
 
@@ -60,26 +55,39 @@ const valueItemSchema = z.object({
 const aboutSchema = z.object({
   eyebrow: z.string().optional(),
   title: z.string().min(1),
+  subtitle: z.string().optional(),
   body: z.array(z.string().min(1)).min(1),
   media: mediaSchema,
   values: z.array(valueItemSchema).default([]),
 });
 
-const projectItemSchema = z.object({
+const experimentItemSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),
-  category: z.string().min(1),
-  description: z.string().optional(),
-  content: z.array(z.string().min(1)).optional(),
+  experimentQuestion: z.string().min(1),
+  content: z.array(z.string().min(1)).min(1),
   media: mediaSchema,
 });
 
-const projectsSchema = z.object({
+const experimentsSchema = z.object({
   eyebrow: z.string().optional(),
   title: z.string().min(1),
   subtitle: z.string().optional(),
+  intro: z.array(z.string().min(1)).default([]),
   note: z.string().optional(),
-  items: z.array(projectItemSchema).min(1),
+  items: z.array(experimentItemSchema).min(1),
+});
+
+const learningItemSchema = z.object({
+  title: z.string().min(1),
+  teaser: z.string().min(1),
+});
+
+const learningSchema = z.object({
+  eyebrow: z.string().optional(),
+  title: z.string().min(1),
+  subtitle: z.string().optional(),
+  items: z.array(learningItemSchema).default([]),
 });
 
 const reasonItemSchema = z.object({
@@ -97,6 +105,7 @@ const contactSchema = z.object({
   eyebrow: z.string().optional(),
   title: z.string().min(1),
   subtitle: z.string().optional(),
+  body: z.array(z.string().min(1)).default([]),
   responseTime: z.string().optional(),
 });
 
@@ -139,9 +148,10 @@ const themeSchema = z.object({
 });
 
 const featuresSchema = z.object({
-  services: z.boolean().default(true),
+  areas: z.boolean().default(true),
   about: z.boolean().default(true),
-  projects: z.boolean().default(true),
+  experiments: z.boolean().default(true),
+  learning: z.boolean().default(true),
   reasons: z.boolean().default(true),
   contact: z.boolean().default(true),
 });
@@ -189,9 +199,10 @@ export const SiteConfigSchema = z.object({
   features: featuresSchema,
   navigation: z.array(navItemSchema).min(1),
   hero: heroSchema,
-  services: servicesSchema,
+  areas: areasSchema,
   about: aboutSchema,
-  projects: projectsSchema,
+  experiments: experimentsSchema,
+  learning: learningSchema,
   reasons: reasonsSchema,
   contactSection: contactSchema,
   footer: footerSchema,
@@ -202,10 +213,10 @@ export const SiteConfigSchema = z.object({
 export type SiteConfig = z.infer<typeof SiteConfigSchema>;
 export type NavItem = z.infer<typeof navItemSchema>;
 export type Media = z.infer<typeof mediaSchema>;
-export type ServiceItem = z.infer<typeof serviceItemSchema>;
-export type ProcessStep = z.infer<typeof processStepSchema>;
+export type AreaItem = z.infer<typeof areaItemSchema>;
 export type ValueItem = z.infer<typeof valueItemSchema>;
-export type ProjectItem = z.infer<typeof projectItemSchema>;
+export type ExperimentItem = z.infer<typeof experimentItemSchema>;
+export type LearningItem = z.infer<typeof learningItemSchema>;
 export type ReasonItem = z.infer<typeof reasonItemSchema>;
 export type Address = z.infer<typeof addressSchema>;
 export type SocialLink = z.infer<typeof socialLinkSchema>;

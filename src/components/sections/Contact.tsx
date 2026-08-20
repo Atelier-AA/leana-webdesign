@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site.config";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/forms/ContactForm";
+import { renderRichText } from "@/lib/richtext";
 
 export function Contact({ showHeading = true }: { showHeading?: boolean }) {
   const { contactSection, contact } = siteConfig;
@@ -16,6 +17,14 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
               title={contactSection.title}
               subtitle={contactSection.subtitle}
             />
+          ) : null}
+
+          {contactSection.body.length > 0 ? (
+            <div className="mt-6 space-y-4 text-pretty text-muted-foreground">
+              {contactSection.body.map((paragraph) => (
+                <p key={paragraph}>{renderRichText(paragraph)}</p>
+              ))}
+            </div>
           ) : null}
 
           <dl className="mt-10 space-y-6 text-sm">

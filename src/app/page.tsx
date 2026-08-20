@@ -1,8 +1,8 @@
 import { siteConfig } from "@/config/site.config";
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
+import { Areas } from "@/components/sections/Areas";
 import { About } from "@/components/sections/About";
-import { Projects } from "@/components/sections/Projects";
+import { Experiments } from "@/components/sections/Experiments";
 import { Reasons } from "@/components/sections/Reasons";
 import { CtaBand } from "@/components/sections/CtaBand";
 
@@ -12,14 +12,16 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      {features.services ? (
-        <Services footerLink={{ label: "Alle Leistungen im Detail", href: "/leistungen" }} />
+      {features.areas ? (
+        <Areas footerLink={{ label: "Alles, was ich ausprobiere", href: "/experimente" }} />
       ) : null}
-      {features.about ? <About cta={{ label: "Mehr über mich", href: "/ueber-mich" }} /> : null}
-      {features.projects ? (
-        <Projects
+      {features.about ? (
+        <About cta={{ label: "Warum ich das mache", href: "/warum-ich-das-mache" }} />
+      ) : null}
+      {features.experiments ? (
+        <Experiments
           limit={3}
-          footerLink={{ label: "Alle Beispielprojekte ansehen", href: "/projekte" }}
+          footerLink={{ label: "Alle Experimente ansehen", href: "/experimente" }}
         />
       ) : null}
       {features.reasons ? <Reasons /> : null}

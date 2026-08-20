@@ -21,6 +21,11 @@ export function Hero() {
           <p className="mt-6 max-w-lg text-pretty text-lg text-muted-foreground">
             {hero.subheadline}
           </p>
+          {hero.tagline ? (
+            <p className="mt-4 max-w-lg text-pretty font-display text-xl font-medium leading-snug">
+              {hero.tagline}
+            </p>
+          ) : null}
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Button href={hero.ctaPrimary.href}>{hero.ctaPrimary.label}</Button>
             {hero.ctaSecondary ? (

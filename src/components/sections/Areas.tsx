@@ -5,24 +5,20 @@ import { Button } from "@/components/ui/Button";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
-export function Services({
+export function Areas({
   showHeading = true,
   footerLink,
 }: {
   showHeading?: boolean;
   footerLink?: { label: string; href: string };
 }) {
-  const { services } = siteConfig;
+  const { areas } = siteConfig;
 
   return (
     <section className="py-20 md:py-28">
       <Container>
         {showHeading ? (
-          <SectionHeading
-            eyebrow={services.eyebrow}
-            title={services.title}
-            subtitle={services.subtitle}
-          />
+          <SectionHeading eyebrow={areas.eyebrow} title={areas.title} subtitle={areas.subtitle} />
         ) : null}
 
         <div
@@ -30,7 +26,7 @@ export function Services({
             showHeading ? "mt-14" : ""
           }`}
         >
-          {services.items.map((item, index) => (
+          {areas.items.map((item, index) => (
             <RevealOnScroll key={item.title} delay={index * 60} className="bg-background">
               <div className="flex h-full flex-col gap-4 p-8">
                 <DynamicIcon name={item.icon} className="size-6 text-accent" />
@@ -42,6 +38,10 @@ export function Services({
             </RevealOnScroll>
           ))}
         </div>
+
+        {areas.note ? (
+          <p className="mt-8 max-w-2xl text-sm italic text-muted-foreground">{areas.note}</p>
+        ) : null}
 
         {footerLink ? (
           <div className="mt-12 flex justify-center">

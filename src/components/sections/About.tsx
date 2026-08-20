@@ -2,6 +2,7 @@ import { siteConfig } from "@/config/site.config";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
+import { renderRichText } from "@/lib/richtext";
 
 export function About({
   showHeading = true,
@@ -36,7 +37,7 @@ export function About({
           ) : null}
           <div className="mt-6 space-y-4 text-pretty text-muted-foreground">
             {about.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{renderRichText(paragraph)}</p>
             ))}
           </div>
 
