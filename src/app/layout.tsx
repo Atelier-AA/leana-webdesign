@@ -5,6 +5,7 @@ import { buildThemeStyleTag } from "@/lib/theme";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { ChromeGate } from "@/components/layout/ChromeGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -75,11 +76,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Zum Inhalt springen
         </a>
-        <SiteHeader />
+        <ChromeGate>
+          <SiteHeader />
+        </ChromeGate>
         <main id="main-content" className="flex-1">
           {children}
         </main>
-        <SiteFooter />
+        <ChromeGate>
+          <SiteFooter />
+        </ChromeGate>
         <JsonLd />
       </body>
     </html>
