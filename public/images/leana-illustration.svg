@@ -16,6 +16,10 @@
       <stop offset="0%" stop-color="#12a68d"/>
       <stop offset="100%" stop-color="#0d7d6c"/>
     </linearGradient>
+    <linearGradient id="hairGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#7a4f34"/>
+      <stop offset="100%" stop-color="#5c3a24"/>
+    </linearGradient>
   </defs>
 
   <rect width="480" height="600" fill="#fafaf9"/>
@@ -34,19 +38,50 @@
   <circle cx="332" cy="82" r="4.5" fill="#f2c675"/>
   <circle cx="392" cy="62" r="4.5" fill="#f2c675"/>
 
-  <!-- person, drawn behind the desk so the desk hides the lower body -->
+  <!-- person -->
   <g>
-    <path d="M198 340 L192 400 Q224 412 256 400 L250 340 Z" fill="#6a5138"/>
+    <!-- neck -->
+    <path d="M204 342 L198 396 Q224 408 250 396 L244 342 Z" fill="#f0c9a8"/>
+
+    <!-- sweater -->
     <path d="M76 600 C80 494 94 412 152 392 Q224 374 296 392 C354 412 368 494 372 600 Z" fill="url(#sweaterGrad)"/>
     <path d="M76 600 C80 494 94 412 152 392 Q188 384 224 382 L224 600 Z" fill="#0d7d6c"/>
 
-    <ellipse cx="224" cy="292" rx="66" ry="70" fill="#3a2a20"/>
-    <ellipse cx="224" cy="306" rx="46" ry="50" fill="#6a5138"/>
-    <ellipse cx="204" cy="304" rx="5.5" ry="6.5" fill="#16181c"/>
-    <ellipse cx="248" cy="304" rx="5.5" ry="6.5" fill="#16181c"/>
-    <path d="M206 328 Q224 339 242 328" fill="none" stroke="#16181c" stroke-width="3.2" stroke-linecap="round"/>
-    <path d="M188 312 q6 -7 12 0" fill="none" stroke="#16181c" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
-    <path d="M240 312 q6 -7 12 0" fill="none" stroke="#16181c" stroke-width="2.2" stroke-linecap="round" opacity="0.5"/>
+    <!-- long hair, behind the head, reaching past the shoulders -->
+    <path d="M224 202
+             C176 202 140 240 138 296
+             C136 344 148 384 150 424
+             C152 452 146 470 132 486
+             C160 476 172 448 174 414
+             C176 452 180 480 172 508
+             C196 494 202 458 200 420
+             C214 440 212 468 202 494
+             C222 480 228 448 224 414
+             C220 448 226 480 246 494
+             C236 468 234 440 248 420
+             C238 458 244 494 268 508
+             C260 480 264 452 266 414
+             C268 448 280 476 308 486
+             C294 470 288 452 290 424
+             C292 384 304 344 302 296
+             C300 240 264 202 224 202 Z" fill="url(#hairGrad)"/>
+
+    <!-- head -->
+    <ellipse cx="224" cy="300" rx="60" ry="58" fill="#f0c9a8"/>
+
+    <!-- hairline / crown, same color as hair mass, overlapping the top of the face oval -->
+    <path d="M164 296 C160 232 188 206 224 206 C260 206 288 232 284 296
+             C270 254 250 236 224 236 C198 236 178 254 164 296 Z" fill="url(#hairGrad)"/>
+    <path d="M224 210 Q220 240 222 252" stroke="#4a2f1c" stroke-width="2" opacity="0.35" stroke-linecap="round" fill="none"/>
+
+    <!-- face features -->
+    <ellipse cx="202" cy="308" rx="5.5" ry="6.5" fill="#3a2a1e"/>
+    <ellipse cx="246" cy="308" rx="5.5" ry="6.5" fill="#3a2a1e"/>
+    <path d="M188 292 q8 -6 16 -1" fill="none" stroke="#6b4a30" stroke-width="2.4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M234 292 q8 -6 16 -1" fill="none" stroke="#6b4a30" stroke-width="2.4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M204 334 Q224 346 244 334" fill="none" stroke="#a35b46" stroke-width="3.4" stroke-linecap="round"/>
+    <ellipse cx="196" cy="322" rx="8" ry="5" fill="#e8a789" opacity="0.45"/>
+    <ellipse cx="252" cy="322" rx="8" ry="5" fill="#e8a789" opacity="0.45"/>
   </g>
 
   <rect x="0" y="452" width="480" height="148" fill="url(#deskGrad)"/>
@@ -84,6 +119,6 @@
   <!-- forearms resting on the desk, in front of the laptop base -->
   <path d="M158 530 C176 508 200 500 220 506" fill="none" stroke="#0d7d6c" stroke-width="22" stroke-linecap="round"/>
   <path d="M292 530 C274 508 250 500 232 506" fill="none" stroke="#12a68d" stroke-width="22" stroke-linecap="round"/>
-  <circle cx="152" cy="534" r="13" fill="#6a5138"/>
-  <circle cx="298" cy="534" r="13" fill="#6a5138"/>
+  <circle cx="152" cy="534" r="13" fill="#f0c9a8"/>
+  <circle cx="298" cy="534" r="13" fill="#f0c9a8"/>
 </svg>
