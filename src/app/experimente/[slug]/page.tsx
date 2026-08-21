@@ -73,6 +73,16 @@ export default async function ExperimentDetailPage(props: PageProps<"/experiment
         </Container>
 
         <Container className="mt-12 flex flex-wrap items-center gap-4">
+          {experiment.liveUrl ? (
+            <Button
+              href={experiment.liveUrl.href}
+              variant="outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {experiment.liveUrl.label}
+            </Button>
+          ) : null}
           <Button href="/kontakt">{hero.ctaPrimary.label}</Button>
           <Link
             href="/experimente"

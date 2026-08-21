@@ -176,6 +176,7 @@ const rawConfig: SiteConfig = {
           alt: "Laptop mit einer Café-Webseiten-Vorschau auf einem Holztisch",
           aspectRatio: "4 / 5",
         },
+        liveUrl: { label: "Live ansehen", href: "https://www.elindo.ch" },
       },
       {
         slug: "coiffeur-haarwerk",
@@ -191,6 +192,7 @@ const rawConfig: SiteConfig = {
           alt: "Laptop mit einer Coiffeur-Webseiten-Vorschau auf einer hellen Ablage",
           aspectRatio: "4 / 5",
         },
+        liveUrl: { label: "Live ansehen", href: "https://atelier-aa-ch.vercel.app" },
       },
       {
         slug: "handwerk-meier",
@@ -206,6 +208,7 @@ const rawConfig: SiteConfig = {
           alt: "Laptop mit einer Handwerksbetrieb-Webseiten-Vorschau auf einer Werkbank",
           aspectRatio: "4 / 5",
         },
+        liveUrl: { label: "Live ansehen", href: "http://localhost:8000/index.html" },
       },
     ],
   },

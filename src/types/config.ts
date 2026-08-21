@@ -68,6 +68,7 @@ const experimentItemSchema = z.object({
   experimentQuestion: z.string().min(1),
   content: z.array(z.string().min(1)).min(1),
   media: mediaSchema,
+  liveUrl: linkSchema.optional(),
 });
 
 const experimentsSchema = z.object({
