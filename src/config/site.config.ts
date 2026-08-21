@@ -131,8 +131,8 @@ const rawConfig: SiteConfig = {
     ],
     media: {
       type: "image",
-      src: "/images/leana-portrait.jpg",
-      alt: "Porträt von Leana",
+      src: "/images/leana-illustration.svg",
+      alt: "Illustration von Leana an ihrem Schreibtisch mit Laptop",
       aspectRatio: "4 / 5",
     },
     values: [
